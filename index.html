@@ -16,28 +16,34 @@
 <body>
 <h1>Privacy Policy</h1>
 <p><strong>Beyond Copy-Paste: AI-Resilient Teaching Toolkit</strong> — Chrome Extension</p>
-<p class="date">Last updated: March 12, 2026</p>
+<p class="date">Last updated: April 17, 2026</p>
 
 <div class="highlight">
-<strong>Summary:</strong> This extension does not collect, store, transmit, or share any user data whatsoever. It runs entirely in your browser with no server communication.
+<strong>Summary:</strong> This extension does not collect, transmit, or share any user data. Starting in v2.8, it saves your most recent lesson transformations locally in your browser so you can reload past work. That data never leaves your device.
 </div>
 
 <h2>What Data We Collect</h2>
-<p>None. This extension collects zero user data. No personal information, no browsing history, no usage analytics, no cookies, and no telemetry of any kind.</p>
+<p>None. This extension collects zero user data. No personal information, no browsing history, no usage analytics, no cookies, and no telemetry of any kind. Nothing is transmitted to Quinnsight or any third party at any time.</p>
 
 <h2>How the Extension Works</h2>
 <p>Beyond Copy-Paste is a side-panel reference tool for educators. All content — lesson transformation prompts, assignment examples, grading guides, classroom norms, and diagnostic tools — is bundled locally within the extension. Everything runs in your browser. Nothing is sent to any external server.</p>
-
-<p>When you use the "Open in Claude" button, you are choosing to navigate to claude.ai with your generated prompt. This is a standard browser navigation initiated by you — the extension does not transmit any data itself.</p>
+<p>When you use the "Open in Claude," "ChatGPT," or "Gemini" buttons, you are choosing to navigate to that AI tool's website with your generated prompt. This is a standard browser navigation initiated by you — the extension does not transmit any data itself.</p>
 
 <h2>Permissions</h2>
-<p>This extension uses only the <code>sidePanel</code> permission, which allows it to display a sidebar in Chrome. It does not request access to your tabs, browsing activity, history, bookmarks, or any other browser data.</p>
+<p>This extension uses the following Chrome permissions, all for local functionality only:</p>
+<p><code>sidePanel</code> — displays the toolkit as a sidebar in Chrome.<br>
+<code>activeTab</code> and <code>scripting</code> — let the "Pull Highlighted Text" button read text you have manually highlighted on the current tab. These run only when you click the button and read nothing else.<br>
+<code>storage</code> — saves your most recent lesson transformations (up to 10) to your browser's local storage so you can reload past work from the Recent Transformations drawer.<br>
+<code>host_permissions</code> — required so "Pull Highlighted Text" works across any webpage. The extension reads only your current selection when you click the button.</p>
 
 <h2>Third-Party Services</h2>
 <p>This extension does not integrate with, send data to, or receive data from any third-party services, APIs, or analytics platforms.</p>
 
 <h2>Data Storage</h2>
-<p>Any text you enter into the extension's forms (such as lesson descriptions or assignment text) exists only in your browser's active memory while the side panel is open. It is not saved, stored, or persisted anywhere. Closing the side panel clears all entered content.</p>
+<p>Any text you enter into the extension's forms (such as lesson descriptions, assignment text, or uploaded file contents) is processed locally in your browser. Starting in v2.8, the extension saves your most recent lesson transformations (up to 10) to your browser's local storage using <code>chrome.storage.local</code>, so you can reload past work from the Recent Transformations drawer. This data never leaves your device and is not transmitted, shared, or collected by Quinnsight. You can clear this history at any time via the "Clear all" button in the Recent Transformations drawer. Prior to v2.8, no data was persisted between sessions.</p>
+
+<h2>File Uploads</h2>
+<p>Starting in v2.8, you can upload worksheet files (PDF, DOCX, PNG, JPG, TXT) into the extension. All file processing — including text extraction from PDFs and Word documents — happens locally in your browser using bundled libraries. Uploaded files are not sent to any server.</p>
 
 <h2>Children's Privacy</h2>
 <p>This extension is designed for educators. It does not collect data from any user, including children under 13.</p>
